@@ -42,3 +42,8 @@ ln -fs "/etc/nginx/sites-available/default" "/etc/nginx/sites-enabled/default"
 
 service php7.1-fpm restart
 service nginx restart
+
+cd /vagrant_data/github-connect
+composer install
+cp .env.example .env
+php artisan key:generate
